@@ -1,0 +1,119 @@
+.contenedor{
+    height: 100vh;
+    grid-gap:  0.2cm;
+    display: grid;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image:url(../img/estudio-de-grabacion-1-1024x1024.jpg) ;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 1fr 20fr 3fr 3fr 1fr;
+    grid-template-areas: 
+         "header header header"
+         "principal principal principal"
+         "submenu1 submenu2 submenu3 "
+         "submenu4 submenu5 submenu3 "
+         "footer footer footer"
+         
+    ;
+}
+.header{
+    grid-area: header;
+    background-color: rgb(255, 255, 255);
+}
+
+.principal{
+    grid-area: principal;
+    
+    background-image: url(../img/cusco.jpg);
+}
+.submenu1{
+    grid-area: submenu1;
+    background-color: yellow;
+}
+
+.submenu2{
+    grid-area: submenu2;
+    background-color: rgb(0, 221, 255);
+}
+
+.submenu3{
+    grid-area: submenu3;
+    background-image: url(../img/zapatillas\ nike\ off.jpg);
+}
+
+.submenu4{
+    grid-area: submenu4;
+    background-color: rgb(57, 126, 196);
+}
+
+.submenu5{
+    grid-area: submenu5;
+    background-color: rgb(230, 46, 46);
+}
+
+
+.footer{
+    grid-area: footer;
+    background-color: yellow;
+}
+
+
+@media screen and (max-width: 700px){
+    .contenedor{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr 1fr 2fr 1fr ;
+        grid-template-areas: 
+            "header header"
+            "principal principal"
+            "submenu1 submenu2"
+            "submenu3 submenu4"
+            "submenu5 submenu5"
+            "footer footer"
+            ;
+    }
+}
+@media screen and (max-width: 300px){
+    .contenedor{
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-areas: 
+        "header "
+        "principal"
+        "submenu1"
+        "submenu2"
+        "submenu3"
+        "submenu4"
+        "submenu5"
+        "footer"
+        ;
+    }
+}
+.nadvar{
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+}
+.menu a{
+    font-size: 19px;
+    padding: 10px 20px;
+    color: grey;
+    transition: 0.5s;
+}
+.menu a:hover{
+    background: rgba(0,0,0,0,5);
+    color: rgb(0, 0, 0);
+}
+.logo{
+    font-size: 25px;
+    cursor: pointer;
+}
+.logo span{
+    color: rgb(0, 0, 0);
+}
+.responsive{
+    display: none;
+}
+
